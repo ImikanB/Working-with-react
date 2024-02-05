@@ -5,6 +5,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 
 //BOOkS
+
 const firstBook = {
   img: 'https://images-na.ssl-images-amazon.com/images/I/81GuYRxyGEL._AC_UL600_SR600,400_.jpg',
   title: "Happy Valentine's Day, Mouse!",
@@ -33,7 +34,11 @@ function BookList() {
         img={firstBook.img} 
         title={firstBook.title} 
         author={firstBook.author}
-      />
+      >
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi facilis rerum, id officia debitis minima delectus odit illo accusantium sunt?
+        </p>
+      </Book>
       <Book 
         img={secondBook.img} 
         title={secondBook.title}
@@ -54,11 +59,13 @@ function BookList() {
 }
 
 const Book = (props) => {
+  const {img, title, author, children} = props
   return (
     <article className='book'>
-      <img className='img' src={props.img} alt='' />
-      <h2>{props.title}</h2>
-      <h4>{props.author}</h4>
+      <img className='img' src={img} alt='' />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
+      {children}
     </article>
   )
 }

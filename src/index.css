@@ -47,3 +47,7 @@ body {
 .img {
  max-width: 300px;
 }
+
+.book p {
+ margin-top: 0.5rem;
+}
