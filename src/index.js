@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDom from 'react-dom'
+import {createRoot} from 'react-dom/client'
 
 //CSS
 import './index.css';
@@ -12,12 +12,14 @@ import './index.css';
 function Booklist() {
   return (
     <section className='booklist'>
-      <Book />
+      <Book job='developer'/>
+      <Book title='random title' number={22}/>
     </section>
   )
 }
 
-const Book = () => {
+const Book = (props) => {
+  console.log(props);
   return (
     <article className='book'>
       <img src={img} alt=''/>
@@ -27,4 +29,5 @@ const Book = () => {
   )
 }
 
-ReactDom.render(<Booklist />, document.getElementById('root'));
+// ReactDom.render(<Booklist />, document.getElementById('root'));
+createRoot(document.getElementById('root')).render(<Booklist />)
