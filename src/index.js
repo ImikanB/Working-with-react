@@ -15,6 +15,16 @@ const secondBook = {
   title: 'The Housemaid',
   author: 'Freida McFadden',
 }
+const thirdBook = {
+  img: 'https://images-na.ssl-images-amazon.com/images/I/817-Vrzp+tL._AC_UL600_SR600,400_.jpg',
+  title: "Little Blue Truck's Valentine",
+  author: 'Alice Schertle',
+}
+const fourthBook = {
+  img: 'https://images-na.ssl-images-amazon.com/images/I/81uMF1t16LL._AC_UL600_SR600,400_.jpg',
+  title: "If Only I Had Told Her",
+  author: 'Laura Nowlin',
+}
 
 function BookList() {
   return (
@@ -28,6 +38,16 @@ function BookList() {
         img={secondBook.img} 
         title={secondBook.title}
         author={secondBook.author}
+       />
+       <Book 
+        img={thirdBook.img}
+        title={thirdBook.title}
+        author={thirdBook.author}
+       />
+       <Book 
+        img={fourthBook.img}
+        title={fourthBook.title}
+        author={fourthBook.author}
        />
     </section>
   )
