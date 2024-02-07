@@ -51,3 +51,18 @@ img {
 .book p {
  margin-top: 0.5rem;
 }
+
+button {
+ background-color: rgb(252, 171, 157);
+ color: black;
+ font-size: 0.9rem;
+ font-weight: bold;
+ padding: 0.2rem;
+ margin-right: 1rem;
+ margin-top: 1rem;
+ border: 2px solid tomato;
+ border-radius: 1rem;
+}
+button:hover {
+ background-color: tomato;
+}
